@@ -43,8 +43,6 @@ func main() {
 	req, err := http.NewRequest("GET",url,nil)
 	header := string(" UsernameToken Username=\"" + user + "\",PasswordDigest=\"" + passwordDigest + "\",Nonce=\""+ nonce + "\",Created=\""+ timestamp + "\"")
 
-    fmt.Printf(nonce)
-	fmt.Printf("\n")
 	req.Header.Set("X-WSSE", header)
 	req.Header.Set("Content-Type", "application/json")
 
